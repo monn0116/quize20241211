@@ -1,0 +1,157 @@
+body {
+      height: 100%; /* 高さを100%に設定 */
+      margin: 0;
+      overflow-y: auto; /* 縦スクロールを許可 */
+      background-color: #f8f9fa; /* 背景色を設定 */
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* ヘッダー全体のスタイル */
+.header {
+    background-color: #000; /* 黒い背景 */
+    color: #fff; /* 白いテキスト */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 常に前面に表示 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 影を追加 */
+}
+
+/* ヘッダー内部のコンテンツを中央揃え */
+.header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ヘッダーロゴのスタイル */
+.header-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase; /* 大文字に変換 */
+}
+
+/* "Ticket" 部分の平行四辺形スタイル */
+.header-highlight {
+    display: inline-block;
+    background-color: #333; /* 平行四辺形の背景色（黒に近い色） */
+    color: #fff; /* テキスト色 */
+    padding: 5px 15px; /* 内側の余白 */
+    transform: skew(-20deg); /* 平行四辺形に変形 */
+    margin-left: 5px; /* "FANY" との間隔 */
+    font-weight: bold;
+}
+
+/* 平行四辺形内のテキストを補正 */
+.header-highlight span {
+    display: inline-block;
+    transform: skew(20deg); /* テキストを元の形状に補正 */
+}
+
+/* パンくずリストのスタイル */
+.breadcrumb-container {
+    background-color: #f8f9fa; /* 薄いグレー背景 */
+    padding: 10px 20px;
+    position: fixed;
+    top: 60px; /* ヘッダーの高さに合わせて調整 */
+    width: 100%;
+    z-index: 999; /* ヘッダーの下に表示 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+}
+
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    background: none; /* 背景色を透明に */
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #007bff; /* リンクの色 */
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline; /* ホバー時に下線を追加 */
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #6c757d; /* 現在のページの色 */
+}
+
+
+/* コンテンツの位置調整 */
+.content {
+    margin-top: 120px; /* ヘッダーとパンくずリストの高さ分を調整 */
+    padding: 20px;
+}
+
+/* 画像のスタイル */
+.content-image {
+    max-width: 100%; /* 画面幅を超えないよう調整 */
+    height: auto; /* 縦横比を維持 */
+    border: 2px solid #ddd; /* 画像の枠線 */
+    border-radius: 5px; /* 角を丸める */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+}
+
+/* 画像サイズを小さく調整 */
+.small-image {
+     max-width: 120px; /* 画面幅を超えないよう調整 */
+    height: 120px; /* 縦横比を維持 */
+    margin: 0 auto; /* 画像を中央揃え */
+    border: 2px solid #ddd; /* 枠線 */
+    border-radius: 5px; /* 角を丸める */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影 */
+}
+
+.youtube-embed-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 アスペクト比 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 5px; /* 角を丸める */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+}
+
+.youtube-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

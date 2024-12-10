@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題ページ</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="header-logo">FANY <span class="header-highlight">Ticket</span></h1>
+        </div>
+    </header>
+   <nav class="breadcrumb-container" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">ホーム</a></li>
+        <li class="breadcrumb-item"><a href="question1.html">第１問</a></li>
+                <li class="breadcrumb-item active" aria-current="page">第３問</li>
+    </ol>
+</nav>
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-3">第２問　？に入る答えを</h2>
+            <!-- 埋め込む画像 -->
+            <div class="text-center mb-3">
+                <img src="question2.png" alt="説明画像" class="img-fluid rounded w-50">
+            </div>
+        <p>第１問正解のご褒美です！ 「立ち飲み屋」</p>
+	<div class="text-center mb-3 youtube-embed-container">
+    	<iframe 
+        	src="https://www.youtube.com/embed/zPyRvk1Z53g?si=XzkJSRomuaXFXzK2" 
+        	title="YouTube video player" 
+        	frameborder="0" 
+        	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        	allowfullscreen>
+    	</iframe>
+	</div>
+        <input type="text" id="answerInput" class="form-control mb-3" placeholder="答えを入力してください">
+        <div class="d-grid">
+            <button id="submitButton" class="btn btn-success btn-lg">送信</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const correctAnswer = "正解"; // 正しい答えを設定
+            const submitButton = document.getElementById('submitButton');
+
+            submitButton.addEventListener('click', function() {
+                const userAnswer = document.getElementById('answerInput').value.trim();
+                if (userAnswer === correctAnswer) {
+                    // 正解の場合は結果ページへ遷移
+                    alert('正解です！次のページへ進みます。');
+                    window.location.href = 'result.html';
+                } else {
+                    // 不正解の場合は警告メッセージを表示
+                    alert('不正解です。もう一度お試しください。');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
